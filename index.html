@@ -5,11 +5,49 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Atempo App</title>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
-        <h1>Título de prueba - 16/05/2021</h1>
+        <div class="contenedor">
+            <header class="encabezado_principal">
+                <div class="contenedor_interno">
+                    <figure class="logotipo">
+                        <img src="./img/logo.png" alt="Logotipo de Atempo">
+                    </figure>
+                    <nav class="menu_principal">
+                        <ul>
+                            <li><a href="#">Cursos</a></li>
+                            <li><a href="#">Mis proyectos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="contenedor_interno">
+                    <form class="barra_busqueda">
+                        <input type="text" placeholder="Busca tu clase">
+                        <button>Buscar</button>
+                    </form>
+                </div>
+                <div class="contenedor_interno">
+                    <button class="boton_agregar">Agregar</button>
+                    <button class="boton_notificaciones">Ver</button>
+    
+                    <div class="contenedor_usuario">
+                        <figure class="foto_usuario">
+                            <img src="./img/logo.png" alt="Foto de usuario">
+                        </figure>
+                        <div class="info_usuario">
+                            <p>Ana Rodríguez</p>
+                            <small>ana@correo.com</small>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
 
         <script src="js/script.js"></script>
     </body>
