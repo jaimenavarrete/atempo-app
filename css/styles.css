@@ -1,7 +1,159 @@
+/***** 
+Estilos generales 
+*****/
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
 .contenedor {
     background-color: #44185D;
+}
+
+/*****
+Estilos para el encabezado de la pagina y sus elementos internos 
+*****/
+
+/* Estilos para el logo */
+
+.encabezado figure {
+    margin: 0;
+}
+
+.encabezado figure img {
+    margin: 0;
+    width: 60px;
+}
+
+/* Estilos para el menu */
+
+.encabezado nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.encabezado nav ul li a {
+    color: #D2AAE9;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+}
+
+.encabezado nav ul li .enlace_activo {
+    border-bottom: 5px solid #AD65D7;
+    color: #FFF;
+}
+
+/* Estilos para la barra de busqueda */
+
+.encabezado .barra_busqueda {
+    position: relative;
+}
+
+.encabezado .barra_busqueda input {
+    background-color: #501C6D;
+    border: none;
+    border-radius: 50px;
+    color: #FFF;
+    outline: none;
+    padding: 15px 40px 15px 15px;
+    width: 100%;
+}
+
+.encabezado .barra_busqueda input::placeholder {
+    color: #D2AAE9;
+}
+
+.encabezado .barra_busqueda button {
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 20px;
+    position: absolute;
+    right: 5px;
+    top: 25%;
+}
+
+/* Estilos para los botones de agregar y ver notificaciones */
+
+.encabezado .contenedor_botones a {
+    color: #D2AAE9;
+    text-decoration: none;
+}
+
+.encabezado .contenedor_botones .boton_agregar {
+    border: 1px solid #AD65D7;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 13px 20px;
+}
+
+.encabezado .contenedor_botones .boton_agregar i {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.encabezado .contenedor_botones .boton_notificaciones i {
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+.encabezado .contenedor_botones .boton_notificaciones {
+    color: #FFF;
+}
+
+.encabezado .contenedor_botones .nueva_notificacion {
+    position: relative;
+}
+
+.encabezado .contenedor_botones .nueva_notificacion::before {
+    content: '';
+
+    background-color: #15DD7D;
+    border-radius: 50%;
+    height: 15px;
+    position: absolute;
+    right: 3px;
+    top: -5px;
+    width: 15px;
+}
+
+/* Estilos para el contenedor de la info del usuario */
+
+.encabezado .contenedor_usuario {
+    border: 1px solid #AD65D7;
+    border-radius: 20px;
+    color: #FFF;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.encabezado .contenedor_usuario .foto_usuario img {
+    height: 80px;
+    width: 80px;
+    display: block;
+}
+
+.encabezado .contenedor_usuario .info_usuario {
+    padding: 5px 10px;
+}
+
+.encabezado .contenedor_usuario .info_usuario p {
+    margin: 10px 0;
+}
+
+.encabezado .contenedor_usuario .info_usuario small {
+    color: #D2AAE9;
+}
+
+.encabezado .contenedor_usuario .la-angle-right {
+    color: #D2AAE9;
+    font-size: 25px;
+    margin-right: 15px;
 }
