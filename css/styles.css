@@ -7,6 +7,7 @@ Estilos generales
 }
 
 body {
+    background-color: #F3F3FC;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -165,6 +166,73 @@ Estilos para el contenido principal y secundario de la página
 .contenedor_principal {
     margin: 0 auto;
     width: 95%;
+}
+
+/* Estilos para los titulos principales */
+
+.principal h1 {
+    margin: 50px 0;
+}
+
+.principal h2 {
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.principal h2 .boton_ver_mas {
+    color: #E72C61;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* Estilos para las tarjetas de clases */
+
+.principal .clase {
+    background-color: #FFF;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.principal .clase .imagen_clase {
+    margin: 0;
+}
+
+.principal .clase .imagen_clase img {
+    width: 100%;
+}
+
+.principal .clase .contenido_clase {
+    padding: 0 15px 20px 15px;
+}
+
+.principal .clase p {
+    color: #5E6571;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.principal .clase .precio_anterior {
+    color: #E72C61;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.principal .clase .boton_agregar_carrito {
+    background-color: #822EB2;
+    border-radius: 50px;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.principal .clase .boton_agregar_carrito i {
+    font-size: 30px;
+    vertical-align: middle;
 }
 
 /* Estilos para el menú secundario de cursos y categorías */
