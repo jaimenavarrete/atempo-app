@@ -10,7 +10,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.contenedor {
+.contenedor_encabezado {
     background-color: #44185D;
 }
 
@@ -43,7 +43,7 @@ Estilos para el encabezado de la pagina y sus elementos internos
     text-decoration: none;
 }
 
-.encabezado nav ul li .enlace_activo {
+.encabezado nav ul li .activo {
     border-bottom: 5px solid #AD65D7;
     color: #FFF;
 }
@@ -156,4 +156,45 @@ Estilos para el encabezado de la pagina y sus elementos internos
     color: #D2AAE9;
     font-size: 25px;
     margin-right: 15px;
+}
+
+/*****
+Estilos para el contenido principal y secundario de la página 
+*****/
+
+.contenedor_principal {
+    margin: 0 auto;
+    width: 95%;
+}
+
+/* Estilos para el menú secundario de cursos y categorías */
+
+.secundario article h2 {
+    border-bottom: 1px solid #DDE7F1;
+    border-top: 1px solid #DDE7F1;
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+.secundario article ul {
+    list-style: none;
+}
+
+.secundario article ul li a {
+    color: #5E6571;
+    display: block;
+    margin: 10px 0;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.secundario article ul li a i {
+    margin-right: 10px;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.secundario article ul li .activo {
+    color: #E72C61;
+    font-weight: bold;
 }
