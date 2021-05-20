@@ -165,6 +165,7 @@ Estilos para el contenido principal y secundario de la página
 
 .contenedor_principal {
     margin: 0 auto;
+    max-width: 1920px;
     width: 95%;
 }
 
@@ -187,6 +188,12 @@ Estilos para el contenido principal y secundario de la página
 }
 
 /* Estilos para las tarjetas de clases */
+
+.principal .seccion_clases {
+    border-bottom: 1px solid #D2D6DC;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+}
 
 .principal .clase {
     background-color: #FFF;
@@ -265,4 +272,48 @@ Estilos para el contenido principal y secundario de la página
 .secundario article ul li .activo {
     color: #E72C61;
     font-weight: bold;
+}
+
+
+/*************************************************
+**************** MEDIA QUERIES *******************
+*************************************************/
+
+@media screen and (min-width: 768px) {
+    /* Estilos para colocar las clases en 2 columnas */
+
+    .contenedor_clases {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Estilos para colocar el contenido princiapal y secundario en 2 columnas */
+
+    .contenedor_principal {
+        display: flex;
+    }
+
+    .principal {
+        width: 75%;
+    }
+
+    .secundario {
+        margin-right: 25px;
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .principal h1 {
+        font-size: 45px;
+    }
+
+    /* Estilos para colocar las clases en 3 columnas */
+
+    .contenedor_clases {
+        grid-template-columns: auto auto auto;
+    }
 }
