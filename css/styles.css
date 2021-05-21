@@ -44,11 +44,12 @@ Estilos para el encabezado de la pagina y sus elementos internos
 
 .encabezado .menu_principal {
     background-color: #44185d;
-    left: -100%;
+    left: -125%;
     position: absolute;
     top: 100%;
     transition: 0.2s ease-out all;
     width: 100%;
+    height: 100vh;
 }
 
 .encabezado .menu_principal ul {
@@ -76,7 +77,7 @@ Estilos para el encabezado de la pagina y sus elementos internos
 
 .encabezado .contenedor_barra_busqueda {
     background-color: #44185d;
-    left: -100%;
+    left: -125%;
     padding: 15px 10px;
     position: absolute;
     top: 100%;
@@ -303,10 +304,127 @@ Estilos para el contenido principal y secundario de la página
         gap: 10px;
         grid-template-columns: auto auto;
     }
+
+    /* Estilos para visualizar el menú en la barra de navegación */
+
+    .encabezado {
+        width: 95%;
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    .encabezado .menu_principal {
+        position: static;
+        height: 100%;
+        width: auto;
+    }
+
+    .encabezado .menu_principal ul li {
+        display: inline-block;
+    }
+
+    .encabezado .contenedor_botones_movil .boton_menu {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-    /* Estilos para colocar el contenido princiapal y secundario en 2 columnas */
+    /* Estilos para los botones de agregar y ver notificaciones en versión de pc */
+
+    .encabezado .contenedor_barra_busqueda {
+        position: static;
+        height: 100%;
+        width: auto;
+    }
+
+    .encabezado .contenedor_botones_movil {
+        display: none;
+    }
+
+    .encabezado .contenedor_botones {
+        display: inline-block;
+    }
+
+    .encabezado .contenedor_botones a {
+        color: #d2aae9;
+        text-decoration: none;
+    }
+
+    .encabezado .contenedor_botones .boton_agregar {
+        border: 1px solid #ad65d7;
+        border-radius: 50px;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+
+    .encabezado .contenedor_botones .boton_agregar i {
+        font-size: 30px;
+        vertical-align: middle;
+    }
+
+    .encabezado .contenedor_botones .boton_notificaciones i {
+        font-size: 35px;
+        vertical-align: middle;
+    }
+
+    .encabezado .contenedor_botones .boton_notificaciones {
+        color: #fff;
+    }
+
+    .encabezado .contenedor_botones .nueva_notificacion {
+        position: relative;
+    }
+
+    .encabezado .contenedor_botones .nueva_notificacion::before {
+        content: '';
+
+        background-color: #15dd7d;
+        border-radius: 50%;
+        height: 13px;
+        position: absolute;
+        right: 3px;
+        top: -3px;
+        width: 13px;
+    }
+
+    /* Estilos para el contenedor de la info del usuario */
+
+    .encabezado .contenedor_usuario {
+        border: 1px solid #ad65d7;
+        border-radius: 20px;
+        color: #fff;
+        display: flex;
+        overflow: hidden;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .encabezado .contenedor_usuario .foto_usuario img {
+        height: 65px;
+        width: 65px;
+        display: block;
+    }
+
+    .encabezado .contenedor_usuario .info_usuario {
+        display: block;
+        padding: 5px 10px;
+    }
+
+    .encabezado .contenedor_usuario .info_usuario p {
+        margin: 10px 0;
+    }
+
+    .encabezado .contenedor_usuario .info_usuario small {
+        color: #d2aae9;
+    }
+
+    .encabezado .contenedor_usuario .la-angle-right {
+        color: #d2aae9;
+        font-size: 25px;
+        margin-right: 15px;
+    }
+
+    /* Estilos para colocar el contenido principal y secundario en 2 columnas */
 
     .contenedor_principal {
         display: flex;
@@ -333,88 +451,3 @@ Estilos para el contenido principal y secundario de la página
         grid-template-columns: auto auto auto;
     }
 }
-
-/* 
-
-Estilos para los botones de agregar y ver notificaciones en versión de pc
-
-.encabezado .contenedor_botones a {
-    color: #d2aae9;
-    text-decoration: none;
-}
-
-.encabezado .contenedor_botones .boton_agregar {
-    border: 1px solid #ad65d7;
-    border-radius: 50px;
-    display: inline-block;
-    padding: 10px 20px;
-}
-
-.encabezado .contenedor_botones .boton_agregar i {
-    font-size: 30px;
-    vertical-align: middle;
-}
-
-.encabezado .contenedor_botones .boton_notificaciones i {
-    font-size: 35px;
-    vertical-align: middle;
-}
-
-.encabezado .contenedor_botones .boton_notificaciones {
-    color: #fff;
-}
-
-.encabezado .contenedor_botones .nueva_notificacion {
-    position: relative;
-}
-
-.encabezado .contenedor_botones .nueva_notificacion::before {
-    content: '';
-
-    background-color: #15dd7d;
-    border-radius: 50%;
-    height: 13px;
-    position: absolute;
-    right: 3px;
-    top: -3px;
-    width: 13px;
-}
-
-
-Estilos para el contenedor de la info del usuario
-
-.encabezado .contenedor_usuario {
-    border: 1px solid #ad65d7;
-    border-radius: 20px;
-    color: #fff;
-    display: flex;
-    overflow: hidden;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.encabezado .contenedor_usuario .foto_usuario img {
-    height: 80px;
-    width: 80px;
-    display: block;
-}
-
-.encabezado .contenedor_usuario .info_usuario {
-    padding: 5px 10px;
-}
-
-.encabezado .contenedor_usuario .info_usuario p {
-    margin: 10px 0;
-}
-
-.encabezado .contenedor_usuario .info_usuario small {
-    color: #d2aae9;
-}
-
-.encabezado .contenedor_usuario .la-angle-right {
-    color: #d2aae9;
-    font-size: 25px;
-    margin-right: 15px;
-}
-
-*/
