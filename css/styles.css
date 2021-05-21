@@ -7,17 +7,27 @@ Estilos generales
 }
 
 body {
-    background-color: #F3F3FC;
+    background-color: #f3f3fc;
     font-family: 'Montserrat', sans-serif;
 }
 
 .contenedor_encabezado {
-    background-color: #44185D;
+    background-color: #44185d;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 /*****
 Estilos para el encabezado de la pagina y sus elementos internos 
 *****/
+
+.encabezado {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
 
 /* Estilos para el logo */
 
@@ -32,131 +42,138 @@ Estilos para el encabezado de la pagina y sus elementos internos
 
 /* Estilos para el menu */
 
-.encabezado nav ul {
+.encabezado .menu_principal {
+    background-color: #44185d;
+    left: -100%;
+    position: absolute;
+    top: 100%;
+    transition: 0.2s ease-out all;
+    width: 100%;
+}
+
+.encabezado .menu_principal ul {
     list-style: none;
     padding: 0;
 }
 
-.encabezado nav ul li a {
-    color: #D2AAE9;
+.encabezado .menu_principal ul li a {
+    color: #d2aae9;
     display: block;
-    padding: 15px 0;
+    padding: 15px 5px;
     text-decoration: none;
 }
 
-.encabezado nav ul li .activo {
-    border-bottom: 5px solid #AD65D7;
-    color: #FFF;
+.encabezado .menu_principal ul li .activo {
+    border-bottom: 5px solid #ad65d7;
+    color: #fff;
+}
+
+.encabezado .menu_activo {
+    left: 0;
 }
 
 /* Estilos para la barra de busqueda */
+
+.encabezado .contenedor_barra_busqueda {
+    background-color: #44185d;
+    left: -100%;
+    padding: 15px 10px;
+    position: absolute;
+    top: 100%;
+    transition: 0.2s ease-out all;
+    width: 100%;
+}
+
+.encabezado .barra_busqueda_activa {
+    left: 0;
+}
 
 .encabezado .barra_busqueda {
     position: relative;
 }
 
 .encabezado .barra_busqueda input {
-    background-color: #501C6D;
+    background-color: #501c6d;
     border: none;
     border-radius: 50px;
-    color: #FFF;
+    color: #fff;
     outline: none;
     padding: 15px 40px 15px 15px;
     width: 100%;
 }
 
 .encabezado .barra_busqueda input::placeholder {
-    color: #D2AAE9;
+    color: #d2aae9;
 }
 
 .encabezado .barra_busqueda button {
     background-color: transparent;
     border: none;
-    color: #FFF;
+    color: #fff;
     font-size: 20px;
     position: absolute;
     right: 5px;
     top: 25%;
 }
 
-/* Estilos para los botones de agregar y ver notificaciones */
+/* Estilos para los botones para dispositivos móviles */
 
-.encabezado .contenedor_botones a {
-    color: #D2AAE9;
+.encabezado .contenedor_botones_movil a {
+    color: #d2aae9;
+    font-size: 25px;
+    padding: 5px 10px;
     text-decoration: none;
-}
-
-.encabezado .contenedor_botones .boton_agregar {
-    border: 1px solid #AD65D7;
-    border-radius: 50px;
-    display: inline-block;
-    padding: 13px 20px;
-}
-
-.encabezado .contenedor_botones .boton_agregar i {
-    font-size: 30px;
     vertical-align: middle;
 }
 
-.encabezado .contenedor_botones .boton_notificaciones i {
-    font-size: 40px;
-    vertical-align: middle;
-}
-
-.encabezado .contenedor_botones .boton_notificaciones {
-    color: #FFF;
-}
-
-.encabezado .contenedor_botones .nueva_notificacion {
+.encabezado .contenedor_botones_movil .nueva_notificacion {
     position: relative;
 }
 
-.encabezado .contenedor_botones .nueva_notificacion::before {
+.encabezado .contenedor_botones_movil .nueva_notificacion::before {
     content: '';
 
-    background-color: #15DD7D;
+    background-color: #15dd7d;
     border-radius: 50%;
-    height: 15px;
+    height: 10px;
     position: absolute;
-    right: 3px;
-    top: -5px;
-    width: 15px;
+    right: 17px;
+    top: 10px;
+    width: 10px;
+}
+
+/* Estilos para ocultar los botones para visualización en pc */
+
+.encabezado .contenedor_botones {
+    display: none;
 }
 
 /* Estilos para el contenedor de la info del usuario */
 
 .encabezado .contenedor_usuario {
-    border: 1px solid #AD65D7;
-    border-radius: 20px;
-    color: #FFF;
-    display: flex;
-    overflow: hidden;
-    justify-content: space-between;
     align-items: center;
+    border: 1px solid #ad65d7;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
 .encabezado .contenedor_usuario .foto_usuario img {
-    height: 80px;
-    width: 80px;
     display: block;
+    height: 50px;
+    width: 50px;
 }
 
 .encabezado .contenedor_usuario .info_usuario {
-    padding: 5px 10px;
-}
-
-.encabezado .contenedor_usuario .info_usuario p {
-    margin: 10px 0;
-}
-
-.encabezado .contenedor_usuario .info_usuario small {
-    color: #D2AAE9;
+    display: none;
 }
 
 .encabezado .contenedor_usuario .la-angle-right {
-    color: #D2AAE9;
+    color: #d2aae9;
     font-size: 25px;
-    margin-right: 15px;
+    margin-left: 5px;
 }
 
 /*****
@@ -164,7 +181,7 @@ Estilos para el contenido principal y secundario de la página
 *****/
 
 .contenedor_principal {
-    margin: 0 auto;
+    margin: 100px auto 0 auto;
     max-width: 1920px;
     width: 95%;
 }
@@ -182,7 +199,7 @@ Estilos para el contenido principal y secundario de la página
 }
 
 .principal h2 .boton_ver_mas {
-    color: #E72C61;
+    color: #e72c61;
     margin-left: 20px;
     text-decoration: none;
 }
@@ -190,16 +207,16 @@ Estilos para el contenido principal y secundario de la página
 /* Estilos para las tarjetas de clases */
 
 .principal .seccion_clases {
-    border-bottom: 1px solid #D2D6DC;
+    border-bottom: 1px solid #d2d6dc;
     margin-bottom: 50px;
     padding-bottom: 25px;
 }
 
 .principal .clase {
-    background-color: #FFF;
+    background-color: #fff;
     border-radius: 5px;
-    overflow: hidden;
     margin-bottom: 15px;
+    overflow: hidden;
     width: 100%;
 }
 
@@ -216,22 +233,22 @@ Estilos para el contenido principal y secundario de la página
 }
 
 .principal .clase p {
-    color: #5E6571;
+    color: #5e6571;
     font-size: 14px;
     margin-bottom: 20px;
 }
 
 .principal .clase .precio_anterior {
-    color: #E72C61;
+    color: #e72c61;
     display: block;
     font-size: 14px;
     margin-bottom: 25px;
 }
 
 .principal .clase .boton_agregar_carrito {
-    background-color: #822EB2;
+    background-color: #822eb2;
     border-radius: 50px;
-    color: #FFF;
+    color: #fff;
     font-weight: bold;
     padding: 10px 20px;
     text-decoration: none;
@@ -245,8 +262,8 @@ Estilos para el contenido principal y secundario de la página
 /* Estilos para el menú secundario de cursos y categorías */
 
 .secundario article h2 {
-    border-bottom: 1px solid #DDE7F1;
-    border-top: 1px solid #DDE7F1;
+    border-bottom: 1px solid #dde7f1;
+    border-top: 1px solid #dde7f1;
     font-size: 18px;
     padding: 20px 0;
 }
@@ -256,7 +273,7 @@ Estilos para el contenido principal y secundario de la página
 }
 
 .secundario article ul li a {
-    color: #5E6571;
+    color: #5e6571;
     display: block;
     margin: 10px 0;
     padding: 10px 0;
@@ -270,10 +287,9 @@ Estilos para el contenido principal y secundario de la página
 }
 
 .secundario article ul li .activo {
-    color: #E72C61;
+    color: #e72c61;
     font-weight: bold;
 }
-
 
 /*************************************************
 **************** MEDIA QUERIES *******************
@@ -284,8 +300,8 @@ Estilos para el contenido principal y secundario de la página
 
     .contenedor_clases {
         display: grid;
-        grid-template-columns: auto auto;
         gap: 10px;
+        grid-template-columns: auto auto;
     }
 }
 
@@ -317,3 +333,88 @@ Estilos para el contenido principal y secundario de la página
         grid-template-columns: auto auto auto;
     }
 }
+
+/* 
+
+Estilos para los botones de agregar y ver notificaciones en versión de pc
+
+.encabezado .contenedor_botones a {
+    color: #d2aae9;
+    text-decoration: none;
+}
+
+.encabezado .contenedor_botones .boton_agregar {
+    border: 1px solid #ad65d7;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.encabezado .contenedor_botones .boton_agregar i {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.encabezado .contenedor_botones .boton_notificaciones i {
+    font-size: 35px;
+    vertical-align: middle;
+}
+
+.encabezado .contenedor_botones .boton_notificaciones {
+    color: #fff;
+}
+
+.encabezado .contenedor_botones .nueva_notificacion {
+    position: relative;
+}
+
+.encabezado .contenedor_botones .nueva_notificacion::before {
+    content: '';
+
+    background-color: #15dd7d;
+    border-radius: 50%;
+    height: 13px;
+    position: absolute;
+    right: 3px;
+    top: -3px;
+    width: 13px;
+}
+
+
+Estilos para el contenedor de la info del usuario
+
+.encabezado .contenedor_usuario {
+    border: 1px solid #ad65d7;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.encabezado .contenedor_usuario .foto_usuario img {
+    height: 80px;
+    width: 80px;
+    display: block;
+}
+
+.encabezado .contenedor_usuario .info_usuario {
+    padding: 5px 10px;
+}
+
+.encabezado .contenedor_usuario .info_usuario p {
+    margin: 10px 0;
+}
+
+.encabezado .contenedor_usuario .info_usuario small {
+    color: #d2aae9;
+}
+
+.encabezado .contenedor_usuario .la-angle-right {
+    color: #d2aae9;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+*/
