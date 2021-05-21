@@ -11,22 +11,18 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.contenedor_encabezado {
-    background-color: #44185d;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
 /*****
 Estilos para el encabezado de la pagina y sus elementos internos 
 *****/
 
 .encabezado {
     align-items: center;
+    background-color: #44185d;
+    top: 0;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    width: 100%;
+    position: fixed;
 }
 
 /* Estilos para el logo */
@@ -60,7 +56,7 @@ Estilos para el encabezado de la pagina y sus elementos internos
 .encabezado .menu_principal ul li a {
     color: #d2aae9;
     display: block;
-    padding: 15px 5px;
+    padding: 20px 5px;
     text-decoration: none;
 }
 
@@ -314,21 +310,40 @@ Estilos para el contenido principal y secundario de la página
     }
 
     .encabezado .menu_principal {
-        position: static;
         height: 100%;
+        position: static;
         width: auto;
+    }
+
+    .encabezado .menu_principal ul {
+        margin: 0;
+        height: 100%;
     }
 
     .encabezado .menu_principal ul li {
         display: inline-block;
     }
 
+    .encabezado .menu_principal ul li a {
+        margin: 0;
+    }
+
     .encabezado .contenedor_botones_movil .boton_menu {
         display: none;
+    }
+
+    .encabezado .contenedor_botones_movil .nueva_notificacion::before {
+        right: 13px;
     }
 }
 
 @media screen and (min-width: 1024px) {
+    /* Estilos para que los items del menú principal cubran toda la altura del menú */
+
+    .encabezado .menu_principal ul li a {
+        padding: 27px 5px;
+    }
+
     /* Estilos para los botones de agregar y ver notificaciones en versión de pc */
 
     .encabezado .contenedor_barra_busqueda {
